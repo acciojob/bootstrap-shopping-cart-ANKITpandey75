@@ -1,116 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <style>
-    body {
-      background: #f4f6f9;
-    }
+<style>
+body{
+  background:#f5f7fa;
+}
 
-    h1, h3 {
-      color: #3b99e0;
-    }
+/* HEADER */
+h1{
+  color:#3b99e0;
+  font-weight:600;
+}
+.block-heading{
+  text-align:center;
+  margin:40px 0;
+  color:#666;
+}
 
-    .block-heading {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+/* MAIN CARD */
+.cart-box{
+  background:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+  border-radius:4px;
+  overflow:hidden;
+}
 
-    .product {
-      background: #fff;
-      padding: 20px;
-      border-bottom: 1px solid #eee;
-    }
+/* LEFT PRODUCTS */
+.product{
+  padding:25px;
+  border-bottom:1px solid #eee;
+}
 
-    .summary {
-      background: #f7fbff;
-      border-top: 3px solid #5ea4f3;
-      padding: 25px;
-    }
+.product h5{
+  color:#3b99e0;
+}
 
-    .summary-item {
-      display: flex;
-      justify-content: space-between;
-      padding: 10px 0;
-      border-bottom: 1px solid #ddd;
-    }
+/* QTY BOX */
+.qty input{
+  width:60px;
+  text-align:center;
+}
 
-    .checkout-btn {
-      width: 100%;
-      margin-top: 20px;
-    }
-  </style>
+/* RIGHT SUMMARY */
+.summary{
+  background:#f7fbff;
+  border-left:1px solid #e6eef7;
+  padding:30px;
+  height:100%;
+}
+
+.summary h3{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.summary-item{
+  display:flex;
+  justify-content:space-between;
+  padding:10px 0;
+  border-bottom:1px solid #e1e1e1;
+}
+
+/* CHECKOUT BUTTON */
+.checkout{
+  margin-top:20px;
+  width:100%;
+  background:#007bff;
+  border:none;
+  padding:12px;
+  color:#fff;
+  font-size:18px;
+  border-radius:4px;
+}
+.checkout:hover{
+  background:#0069d9;
+}
+</style>
 </head>
 
 <body>
 
-<div class="container my-5">
+<div class="container">
 
-  <!-- HEADER -->
   <div class="block-heading">
     <h1>Shopping cart</h1>
-    <p>The customer is very important and should be followed properly.</p>
+    <p>The customer is very important...</p>
   </div>
 
-  <div class="row">
+  <div class="row cart-box">
 
-    <!-- PRODUCTS -->
+    <!-- LEFT SIDE -->
     <div class="col-lg-8">
 
-      <!-- Product 1 -->
       <div class="product row align-items-center">
         <div class="col-md-3">
-          <img src="https://via.placeholder.com/120" class="img-fluid">
+          <img src="https://via.placeholder.com/120">
         </div>
+
         <div class="col-md-4">
           <h5>I am very sorry</h5>
           <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-3 qty">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="1" min="0">
+          <input type="number" value="0" class="form-control">
         </div>
+
         <div class="col-md-2">
           <h5>$120</h5>
         </div>
       </div>
 
-      <!-- Product 2 -->
       <div class="product row align-items-center">
         <div class="col-md-3">
-          <img src="https://via.placeholder.com/120" class="img-fluid">
+          <img src="https://via.placeholder.com/120">
         </div>
+
         <div class="col-md-4">
           <h5>I am very sorry</h5>
-          <p>Same specifications</p>
+          <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-3 qty">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="1" min="0">
+          <input type="number" value="1" class="form-control">
         </div>
+
         <div class="col-md-2">
           <h5>$120</h5>
         </div>
       </div>
 
-      <!-- Product 3 -->
       <div class="product row align-items-center">
         <div class="col-md-3">
-          <img src="https://via.placeholder.com/120" class="img-fluid">
+          <img src="https://via.placeholder.com/120">
         </div>
+
         <div class="col-md-4">
           <h5>I am very sorry</h5>
-          <p>Same specifications</p>
+          <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
         </div>
-        <div class="col-md-3">
+
+        <div class="col-md-3 qty">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="1" min="0">
+          <input type="number" value="1" class="form-control">
         </div>
+
         <div class="col-md-2">
           <h5>$120</h5>
         </div>
@@ -118,10 +160,10 @@
 
     </div>
 
-    <!-- SUMMARY -->
+    <!-- RIGHT SIDE -->
     <div class="col-lg-4 summary">
 
-      <h3 class="text-center">Summary</h3>
+      <h3>Summary</h3>
 
       <div class="summary-item">
         <span>Subtotal</span>
@@ -143,7 +185,7 @@
         <span>$360</span>
       </div>
 
-      <button class="btn btn-primary checkout-btn">Checkout</button>
+      <button class="checkout">checkout</button>
 
     </div>
 
