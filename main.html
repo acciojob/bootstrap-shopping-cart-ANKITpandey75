@@ -9,28 +9,28 @@
 
   <style>
     body {
-      background: #f8f9fa;
+      background: #f4f6f9;
     }
 
-    h1, h2, h3 {
+    h1, h3 {
       color: #3b99e0;
     }
 
     .block-heading {
       text-align: center;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
     }
 
     .product {
+      background: #fff;
       padding: 20px;
       border-bottom: 1px solid #eee;
-      background: #fff;
     }
 
     .summary {
-      background-color: #f7fbff;
+      background: #f7fbff;
       border-top: 3px solid #5ea4f3;
-      padding: 30px;
+      padding: 25px;
     }
 
     .summary-item {
@@ -40,13 +40,9 @@
       border-bottom: 1px solid #ddd;
     }
 
-    .btn-checkout {
+    .checkout-btn {
       width: 100%;
       margin-top: 20px;
-    }
-
-    .product h4 {
-      color: #3b99e0;
     }
   </style>
 </head>
@@ -55,18 +51,15 @@
 
 <div class="container my-5">
 
-  <!-- Heading -->
+  <!-- HEADER -->
   <div class="block-heading">
     <h1>Shopping cart</h1>
-    <p>
-      The customer is very important, the customer will be followed by the customer.
-      Now, as an urn, I have no right to be in possession of property.
-    </p>
+    <p>The customer is very important and should be followed properly.</p>
   </div>
 
   <div class="row">
 
-    <!-- LEFT SIDE PRODUCTS -->
+    <!-- PRODUCTS -->
     <div class="col-lg-8">
 
       <!-- Product 1 -->
@@ -75,15 +68,15 @@
           <img src="https://via.placeholder.com/120" class="img-fluid">
         </div>
         <div class="col-md-4">
-          <h4>I am very sorry</h4>
+          <h5>I am very sorry</h5>
           <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
         </div>
         <div class="col-md-3">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="0">
+          <input type="number" class="form-control" value="1" min="0">
         </div>
         <div class="col-md-2">
-          <h4>$120</h4>
+          <h5>$120</h5>
         </div>
       </div>
 
@@ -93,15 +86,15 @@
           <img src="https://via.placeholder.com/120" class="img-fluid">
         </div>
         <div class="col-md-4">
-          <h4>I am very sorry</h4>
-          <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
+          <h5>I am very sorry</h5>
+          <p>Same specifications</p>
         </div>
         <div class="col-md-3">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="1">
+          <input type="number" class="form-control" value="1" min="0">
         </div>
         <div class="col-md-2">
-          <h4>$120</h4>
+          <h5>$120</h5>
         </div>
       </div>
 
@@ -111,24 +104,24 @@
           <img src="https://via.placeholder.com/120" class="img-fluid">
         </div>
         <div class="col-md-4">
-          <h4>I am very sorry</h4>
-          <p>Display: 5 inches<br>RAM: 4GB<br>Memory: 32GB</p>
+          <h5>I am very sorry</h5>
+          <p>Same specifications</p>
         </div>
         <div class="col-md-3">
           <label>Quantity:</label>
-          <input type="number" class="form-control" value="1">
+          <input type="number" class="form-control" value="1" min="0">
         </div>
         <div class="col-md-2">
-          <h4>$120</h4>
+          <h5>$120</h5>
         </div>
       </div>
 
     </div>
 
-    <!-- RIGHT SIDE SUMMARY -->
+    <!-- SUMMARY -->
     <div class="col-lg-4 summary">
 
-      <h3 class="text-center mb-4">Summary</h3>
+      <h3 class="text-center">Summary</h3>
 
       <div class="summary-item">
         <span>Subtotal</span>
@@ -150,11 +143,12 @@
         <span>$360</span>
       </div>
 
-      <button class="btn btn-primary btn-checkout">checkout</button>
+      <button class="btn btn-primary checkout-btn">Checkout</button>
 
     </div>
 
   </div>
+
 </div>
 
 </body>
